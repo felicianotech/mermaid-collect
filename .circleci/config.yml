@@ -34,9 +34,6 @@ jobs:
           name: Run lint
           command: npm run lint
       - run:
-          name: Fetch local mermaid-config file
-          command: aws s3 cp --region "us-east-1" s3://mermaid-config/mermaid-config.js ./src/mermaid-config.js
-      - run:
           name: Build for tests
           command: |
             mkdir src/build
